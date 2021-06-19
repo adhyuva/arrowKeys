@@ -8,6 +8,7 @@ function eventHandler(event) {
         x += 10;
         xPx = x + "px";
         $("#box").css("left", xPx)
+
     }else if(event.keyCode == 37){
         x -= 10;
         xPx = x + "px";
