@@ -1,21 +1,25 @@
-let up = 0;
-let down = 0;
-let right = 0;
-let left = 0;
 
+let x = 60 ;
+let xPx = x + "px";
+let y = 60 ;
+let yPx = y + "px";
 function eventHandler(event) {
     if(event.keyCode == 39){
-        right ++;
-        document.getElementById("right").innerHTML = `You have pressed the right key ${right} times <br/>`
+        x += 10;
+        xPx = x + "px";
+        $("#box").css("left", xPx)
     }else if(event.keyCode == 37){
-        left ++;
-        document.getElementById("left").innerHTML = `You have pressed the left key ${left} times <br/>`
+        x -= 10;
+        xPx = x + "px";
+        $("#box").css("left", xPx)
     }else if(event.keyCode == 32 || event.keyCode == 38){
-        up ++;
-        document.getElementById("up").innerHTML = `You have pressed the up/space key ${up} times<br/>`
+        y -= 10;
+        yPx = y + "px";
+        $("#box").css("top", yPx)
     }else if(event.keyCode == 40){
-        down ++;
-        document.getElementById("down").innerHTML = `You have pressed the down key ${down} times<br/>`
+        y += 10;
+        yPx = y + "px";
+        $("#box").css("top", yPx)
     }else{
     }
 }
