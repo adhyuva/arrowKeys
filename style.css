@@ -1,0 +1,8 @@
+#box{
+    position: absolute;
+    background-color: greenyellow;
+    height:60px;
+    width:60px;
+    top:60px;
+    left:60px;
+}
