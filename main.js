@@ -22,7 +22,7 @@ function eventHandler(event) {
         if( x == 10){
             x = 10
             xPx = x + "px";
-            document.getElementById("status").innerHTML = "Status: You are going as far as you can go to you left<br/> Click the left arrow to go right.";
+            document.getElementById("status").innerHTML = "Status: You are going as far as you can go to you left<br/> Click the right arrow to go right.";
         }else{
             x -= 10;
             xPx = x + "px";
