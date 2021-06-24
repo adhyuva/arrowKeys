@@ -1,6 +1,7 @@
 
-let x = 60 ;
+let x = 60;
 let xPx = x + "px";
+
 $("#fish2").hide();
 function eventHandler(event) {
     
@@ -8,7 +9,7 @@ function eventHandler(event) {
         if(x == 430){
             x = 430
             xPx = x + "px";
-            document.getElementById("status").innerHTML = "Status: You are going as far as you can go to you right<br/> Click the left arrow to go left.";
+            document.getElementById("status").innerHTML = "Warning: You are going as far as you can go to you right<br/> Click the left arrow to go left!";
         }else{
             x += 10;
             xPx = x + "px";
@@ -19,10 +20,11 @@ function eventHandler(event) {
             document.getElementById("status").innerHTML = "Status: All Good!";
         }
     }else if(event.keyCode == 37){
-        if( x == 10){
-            x = 10
+        if(x == 10){
+            x = 10;
             xPx = x + "px";
-            document.getElementById("status").innerHTML = "Status: You are going as far as you can go to you left<br/> Click the right arrow to go right.";
+            document.getElementById("status").innerHTML = "Warning: You are going as far as you can go to you left<br/> Click the right arrow to go right.";
+
         }else{
             x -= 10;
             xPx = x + "px";
@@ -36,4 +38,10 @@ function eventHandler(event) {
     }
 }
 $("body").keydown(eventHandler);
+
+
+setInterval(function(){
+
+}
+,20)
 

@@ -5,16 +5,42 @@
     top:400px;
     left:60px;
 }
-#line{
-    position: absolute;
-    top:550px;
-}
 body{
-    margin: 10px;
+    margin: 7px;
 }
 #tank{
     background-color: aqua;
     width:500px;
     height:500px;
     border:3px solid black;
+}
+#plastic_1{
+    position: absolute;
+    top: 10px;
+    left:70px;
+}
+#plastic_2{
+    position: absolute;
+    top: 110px;
+    left:10px;
+}
+#plastic_3{
+    position: absolute;
+    top: 210px;
+    left:270px;
+}
+#plastic_4{
+    position: absolute;
+    top: 310px;
+    left:170px;
+}
+#plastic_5{
+    position: absolute;
+    top: 50px;
+    left:370px;
+}
+#plastic_6{
+    position: absolute;
+    top: 400px;
+    left:450px;
 }
