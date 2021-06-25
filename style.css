@@ -3,7 +3,7 @@
     height:60px;
     width:60px;
     top:400px;
-    left:60px;
+    left:70px;
 }
 body{
     margin: 7px;
@@ -16,31 +16,26 @@ body{
 }
 #plastic_1{
     position: absolute;
-    top: 10px;
+    top: 0px;
     left:70px;
 }
 #plastic_2{
     position: absolute;
-    top: 110px;
+    top: 0px;
     left:10px;
 }
 #plastic_3{
     position: absolute;
-    top: 210px;
-    left:270px;
+    top: 0px;
+    left:220px;
 }
 #plastic_4{
     position: absolute;
-    top: 310px;
-    left:170px;
+    top: 0px;
+    left:340px;
 }
 #plastic_5{
     position: absolute;
-    top: 50px;
-    left:340px;
-}
-#plastic_6{
-    position: absolute;
-    top: 400px;
-    left:450px;
+    top: 0px;
+    left:430px;
 }

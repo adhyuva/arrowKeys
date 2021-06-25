@@ -1,7 +1,25 @@
-
+//move varibles
 let x = 60;
 let xPx = x + "px";
+//falling varibles
+let fall = 10;
+let fallPx = fall + "px";
+let fall2 = 10;
+let fallPx2 = fall + "px";
+let fall3 = 10;
+let fallPx3 = fall + "px";
+let fall4 = 10;
+let fallPx4 = fall + "px";
+let fall5 = 10;
+let fallPx5 = fall + "px";
+let weight = Math.ceil(Math.random() * 5)
+let weight2 = Math.ceil(Math.random() * 5)
+let weight3 = Math.ceil(Math.random() * 5)
+let weight4 = Math.ceil(Math.random() * 5)
+let weight5 = Math.ceil(Math.random() * 5)
 
+
+//code for moving fish
 $("#fish2").hide();
 function eventHandler(event) {
     
@@ -34,14 +52,69 @@ function eventHandler(event) {
             document.getElementById("status").innerHTML = "Status: All Good!";
         }
     }else{
-        return
+        return;
     }
 }
 $("body").keydown(eventHandler);
 
-
+// code for falling plastic
 setInterval(function(){
-
+    if(fall < 450){
+    fall = fall + weight;
+    fallPx = fall + "px";
+    $("#plastic_1").css("top", fallPx)
+    }else{
+        weight = Math.ceil(Math.random() * 5)
+        fall = 0;
+        fallPx = fall + "px";
+    }
 }
-,20)
-
+,30)
+setInterval(function(){
+    if(fall2 < 400){
+    fall2 = fall2 + weight2;
+    fallPx2 = fall2 + "px";
+    $("#plastic_2").css("top", fallPx2)
+    }else{
+        weight2 = Math.ceil(Math.random() * 5)
+        fall2 = 0;
+        fallPx2 = fall2 + "px";
+    }
+}
+,30)
+setInterval(function(){
+    if(fall3 < 400){
+    fall3 = fall3 + weight3;
+    fallPx3 = fall3 + "px";
+    $("#plastic_3").css("top", fallPx3)
+    }else{
+        weight3 = Math.ceil(Math.random() * 5)
+        fall3 = 0;
+        fallPx3 = fall3 + "px";
+    }
+}
+,30)
+setInterval(function(){
+    if(fall4 < 400){
+    fall4 = fall4 + weight4;
+    fallPx4 = fall4 + "px";
+    $("#plastic_4").css("top", fallPx4)
+    }else{
+        weight4 = Math.ceil(Math.random() * 5)
+        fall4 = 0;
+        fallPx4 = fall4 + "px";
+    }
+}
+,30)
+setInterval(function(){
+    if(fall5 < 415){
+    fall5 = fall5 + weight5;
+    fallPx5 = fall5 + "px";
+    $("#plastic_5").css("top", fallPx5)
+    }else{
+        weight5 = Math.ceil(Math.random() * 5)
+        fall5 = 0;
+        fallPx5 = fall5 + "px";
+    }
+}
+,30)
