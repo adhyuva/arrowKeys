@@ -1,3 +1,10 @@
+function pausecomp(millis) { 
+    var date = new Date(); var curDate = null; 
+    do { 
+        curDate = new Date(); 
+    } 
+    while(curDate-date < millis); 
+}
 //move varibles
 let x = 60;
 let xPx = x + "px";
@@ -64,9 +71,11 @@ setInterval(function(){
     fallPx = fall + "px";
     $("#plastic_1").css("top", fallPx)
     }else{
+        $("#plastic_1").delay(2000);
         weight = Math.ceil(Math.random() * 5)
         fall = 0;
         fallPx = fall + "px";
+        $("#plastic_1").delay(2000);
     }
 }
 ,30)
