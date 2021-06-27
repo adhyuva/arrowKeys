@@ -31,9 +31,12 @@ $("#fish2").hide();
 function eventHandler(event) {
     
     if(event.keyCode == 39){
+        $("#right").css("color", "rgb(254, 255, 209)")
+        $("#left").css("color", "black")
         if(x == 430){
             x = 430
             xPx = x + "px";
+            $("#status").css("color", "rgb(250, 212, 200)")
             document.getElementById("status").innerHTML = "Warning: You are going as far as you can go to you right<br/> Click the left arrow to go left!";
         }else{
             x += 10;
@@ -42,12 +45,16 @@ function eventHandler(event) {
             document.getElementById("fish2").visibility = "hidden";
             $("#fish2").hide();
             $("#fish").show();
+            $("#status").css("color", "rgb(214, 255, 209)")
             document.getElementById("status").innerHTML = "Status: All Good!";
         }
     }else if(event.keyCode == 37){
+        $("#left").css("color", "rgb(254, 255, 209)")
+        $("#right").css("color", "black")
         if(x == 10){
             x = 10;
             xPx = x + "px";
+            $("#status").css("color", "rgb(250, 212, 200)")
             document.getElementById("status").innerHTML = "Warning: You are going as far as you can go to you left<br/> Click the right arrow to go right.";
 
         }else{
@@ -56,6 +63,7 @@ function eventHandler(event) {
             $("#box").css("left", xPx)
             $("#fish").hide(); 
             $("#fish2").show();
+            $("#status").css("color", "rgb(214, 255, 209)")
             document.getElementById("status").innerHTML = "Status: All Good!";
         }
     }else{
