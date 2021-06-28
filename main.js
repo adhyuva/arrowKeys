@@ -1,10 +1,3 @@
-function pausecomp(millis) { 
-    var date = new Date(); var curDate = null; 
-    do { 
-        curDate = new Date(); 
-    } 
-    while(curDate-date < millis); 
-}
 //move varibles
 let x = 60;
 let xPx = x + "px";
@@ -31,8 +24,6 @@ $("#fish2").hide();
 function eventHandler(event) {
     
     if(event.keyCode == 39){
-        $("#right").css("color", "rgb(254, 255, 209)")
-        $("#left").css("color", "black")
         if(x == 430){
             x = 430
             xPx = x + "px";
@@ -46,11 +37,9 @@ function eventHandler(event) {
             $("#fish2").hide();
             $("#fish").show();
             $("#status").css("color", "rgb(214, 255, 209)")
-            document.getElementById("status").innerHTML = "Status: All Good!";
+            document.getElementById("status").innerHTML = "All Good!";
         }
     }else if(event.keyCode == 37){
-        $("#left").css("color", "rgb(254, 255, 209)")
-        $("#right").css("color", "black")
         if(x == 10){
             x = 10;
             xPx = x + "px";
@@ -64,14 +53,47 @@ function eventHandler(event) {
             $("#fish").hide(); 
             $("#fish2").show();
             $("#status").css("color", "rgb(214, 255, 209)")
-            document.getElementById("status").innerHTML = "Status: All Good!";
+            document.getElementById("status").innerHTML = "All Good!";
         }
     }else{
         return;
     }
 }
 $("body").keydown(eventHandler);
+function rightButton () {
+        if(x == 430){
+            x = 430
+            xPx = x + "px";
+            $("#status").css("color", "rgb(250, 212, 200)")
+            document.getElementById("status").innerHTML = "Warning: You are going as far as you can go to you right<br/> Click the left arrow to go left!";
+        }else{
+            x += 10;
+            xPx = x + "px";
+            $("#box").css("left", xPx)
+            document.getElementById("fish2").visibility = "hidden";
+            $("#fish2").hide();
+            $("#fish").show();
+            $("#status").css("color", "rgb(214, 255, 209)")
+            document.getElementById("status").innerHTML = "All Good!";
+        }
+}
+function leftButton () {
+        if(x == 10){
+            x = 10;
+            xPx = x + "px";
+            $("#status").css("color", "rgb(250, 212, 200)")
+            document.getElementById("status").innerHTML = "Warning: You are going as far as you can go to you left<br/> Click the right arrow to go right.";
 
+        }else{
+            x -= 10;
+            xPx = x + "px";
+            $("#box").css("left", xPx)
+            $("#fish").hide(); 
+            $("#fish2").show();
+            $("#status").css("color", "rgb(214, 255, 209)")
+            document.getElementById("status").innerHTML = "All Good!";
+        }
+}
 // code for falling plastic
 setInterval(function(){
     if(fall < 450){

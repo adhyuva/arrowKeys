@@ -20,14 +20,50 @@ body{
     height:500px;
     border:3px solid black;
 }
+#panel{
+    background-color:rgb(87, 86, 86);
+    width:80%;
+    margin: 5% 10% 0% 10%;
+    padding: 3px;
+    border:1px inset black;
+    height:40%;
+}
+#sticker{
+    background-color:yellow;
+    width:50%;
+    margin:1% 25% 0% 25%;
+    color:blue;
+    border-radius:15px;
+    border: 3px solid black;
+}
 #console{
     background-color:gray;
     position:absolute;
     width:500px;
     border:3px solid black;
     text-align:center;
-    height:220px;
+    height:400px;
 }
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgb(214, 255, 209);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+button:active {
+    background-color: rgb(214, 255, 209);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 /* plastic styles */
 #plastic_1{
