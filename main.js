@@ -101,11 +101,9 @@ setInterval(function(){
     fallPx = fall + "px";
     $("#plastic_1").css("top", fallPx)
     }else{
-        $("#plastic_1").delay(2000);
         weight = Math.ceil(Math.random() * 5)
         fall = 0;
         fallPx = fall + "px";
-        $("#plastic_1").delay(2000);
     }
 }
 ,30)
@@ -157,3 +155,11 @@ setInterval(function(){
     }
 }
 ,30)
+
+setInterval(function(){
+    if(fall > 400||fall2 > 400||fall3 > 400||fall4 > 400||fall5 > 400){
+        document.getElementById("status").innerHTML = "GAME OVER!"; 
+    }else{
+        document.getElementById("status").innerHTML = "All Good!"; 
+    }
+},10)
